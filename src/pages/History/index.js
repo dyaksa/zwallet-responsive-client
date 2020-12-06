@@ -79,7 +79,7 @@ const History = props => {
                                 <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                     <div className="d-flex align-items-center">
                                         <div className="avatar">
-                                            <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                            <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                         </div>
                                         <div className="info">
                                             <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>
@@ -126,7 +126,7 @@ const History = props => {
                                     <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                         <div className="d-flex align-items-center">
                                             <div className="avatar">
-                                                <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                                <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                             </div>
                                             <div className="info">
                                                 <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>
@@ -165,7 +165,7 @@ const History = props => {
                                     <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                         <div className="d-flex align-items-center">
                                             <div className="avatar">
-                                                <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                                <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                             </div>
                                             <div className="info">
                                                 <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>
@@ -203,7 +203,7 @@ const History = props => {
                                     <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                         <div className="d-flex align-items-center">
                                             <div className="avatar">
-                                                <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                                <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                             </div>
                                             <div className="info">
                                                 <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>

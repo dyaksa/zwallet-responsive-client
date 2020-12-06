@@ -68,7 +68,7 @@ const Search = props => {
                                         pathname: `/transfer/input`
                                     }} key={index} className="items label">
                                         <div className="avatar mr-4">
-                                            <img style={{borderRadius: '10px'}} width="70px" height="70px" src={imageURI + item.photo} alt=""/>
+                                            <img style={{borderRadius: '10px'}} width="70px" height="70px" src={item.photo ? item.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} alt=""/>
                                         </div>
                                         <div className="info">
                                             <p className="name text bold">{item.name}</p>

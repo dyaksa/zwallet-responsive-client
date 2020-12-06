@@ -68,7 +68,7 @@ const Input = props => {
                     <p className="text bold d-none d-sm-block">Transfer Money</p>
                     <div className="profile label">
                         <div className="avatar">
-                            <img style={{borderRadius: '10px'}} width="70px" height="70px" src={imageURI+userTransfer.photo} alt="" />
+                            <img style={{borderRadius: '10px'}} width="70px" height="70px" src={userTransfer.photo ? userTransfer.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} alt="" />
                         </div>
                         <div className="info">
                             <p className="name text bold">{userTransfer.name}</p>

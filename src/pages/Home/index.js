@@ -116,7 +116,7 @@ const Home = props => {
                                             <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                                 <div className="d-flex align-items-center">
                                                     <div className="avatar">
-                                                        <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                                        <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                                     </div>
                                                     <div className="info">
                                                         <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>
@@ -256,7 +256,7 @@ const Home = props => {
                     <div style={{ flex: 1, position: 'relative'}}>
                         <div className="d-flex justify-content-between align-items-center d-sm-none mb-3 px-3">
                             <Link to="/profile" className="d-flex">
-                                <img style={{ borderRadius: '10px', marginRight: '20px'}} width="52px" height="52px" src={imageURI+data.photo} alt="" />
+                                <img style={{ borderRadius: '10px', marginRight: '20px'}} width="52px" height="52px" src={data.photo} alt="" />
                                 <div className="d-flex flex-column">
                                     <p className="text mb-2">Hello,</p>
                                     <p className="text bold mb-0">{data.name}</p>
@@ -326,7 +326,7 @@ const Home = props => {
                                             <div key={index} className="d-flex justify-content-between history--item align-items-center mb-4">
                                                 <div className="d-flex align-items-center">
                                                     <div className="avatar">
-                                                        <img style={{borderRadius: '10px'}} src={`${imageURI}${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
+                                                        <img style={{borderRadius: '10px'}} src={`${item.receiver === data.name ? item.photo_sender : item.photo}`} width="56px" height="56px" alt="" />
                                                     </div>
                                                     <div className="info">
                                                         <p className="bold history-text">{item.receiver === data.name ? item.sender : item.receiver}</p>

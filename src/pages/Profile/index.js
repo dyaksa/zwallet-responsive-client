@@ -79,7 +79,7 @@ const Profile = props => {
                             <img className="mr-3" src={Back} alt="back" />
                         </Link>
                     </div>
-                    <img className="mb-3" style={{borderRadius: '10px'}} width="80px" height="80px" src={imageURI+data.photo} alt="" />
+                    <img className="mb-3" style={{borderRadius: '10px'}} width="80px" height="80px" src={data.photo ? data.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} alt="" />
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <img onClick={() => setModalShow(true)} style={{cursor: 'pointer'}} className="mr-2" src={Edit} alt="edit" height="11px" />
                         <p className="mb-0 text-muted med">Edit</p>
@@ -113,7 +113,7 @@ const Profile = props => {
                     <Modal.Body>
                         <form onSubmit={onSubmit}>
                             <div className="d-flex flex-column align-items-center mb-4">
-                                <img width="90px" height="90px" style={{borderRadius: '10px'}} className="mb-3 mt-3" src={imageURI + data.photo} alt="dp" />
+                                <img width="90px" height="90px" style={{borderRadius: '10px'}} className="mb-3 mt-3" src={data.photo ? data.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} alt="dp" />
                                 <p className="mb-2 big bold text-dark">{data.name}</p>
                                 <input name="name" onChange={(e) => setName(e.target.value)} value={name} style={{borderBottom: '1px solid rgba(169, 169, 169, 0.6)', borderRadius: 0}} className="bg-transparent mb-3" type="text" placeholder="Enter new name" />
                                 <input name="photo" className="bg-transparent" type="file" onChange={(e) => setImageFile(e.target.files[0])}/>

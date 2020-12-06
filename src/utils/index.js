@@ -1,3 +1,3 @@
-export const imageURI = "http://54.209.94.151:8000/images/";
-export const URI = "http://54.209.94.151:8000/api/v1";
-export const URL_ADM = "http://54.209.94.151:8000/admin/api/v1";
+export const imageURI = "https://infinite-plains-54238.herokuapp.com/images/";
+export const URI = "https://infinite-plains-54238.herokuapp.com/api/v1";
+export const URL_ADM = "https://infinite-plains-54238.herokuapp.com/api/v1";

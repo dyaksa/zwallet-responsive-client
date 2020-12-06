@@ -99,7 +99,7 @@ const Content = () => {
               <form encType="multipart/form-data" onSubmit={editPhoto}>
                 <img
                   className="photo-user-detail"
-                  src={imageURI + photo}
+                  src={photo ? photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"}
                   alt=""
                 />
                 <input

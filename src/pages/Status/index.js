@@ -130,7 +130,7 @@ const Status = (props) => {
                     style={{ borderRadius: "10px" }}
                     width="70px"
                     height="70px"
-                    src={imageURI + userTransfer.photo}
+                    src={userTransfer.photo ? userTransfer.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"}
                     alt=""
                   />
                 </div>
@@ -203,7 +203,7 @@ const Status = (props) => {
                     style={{ borderRadius: "10px" }}
                     width="70px"
                     height="70px"
-                    src={imageURI + userTransfer.photo}
+                    src={userTransfer.photo ? userTransfer.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"}
                     alt=""
                   />
                 </div>

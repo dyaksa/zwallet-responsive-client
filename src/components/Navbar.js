@@ -34,7 +34,7 @@ const Bar = props => {
                 <Nav.Item className="logo primary">Zwallet</Nav.Item>
                 <Nav.Item className="d-none d-md-flex justify-content-between align-items-center">
                     <div className="mr-4">
-                        <img src={imageURI+data.photo} style={{borderRadius: '10px'}} width="52px" height="52px" alt="profile" />
+                        <img src={data.photo ? data.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} style={{borderRadius: '10px'}} width="52px" height="52px" alt="profile" />
                     </div>
                     <div className="mr-4">
                         <div className="text bold">{data.name}</div>
@@ -47,7 +47,7 @@ const Bar = props => {
                 <div className={`sidenav ${sidebarActive ? 'active' : ''}`}>
                     <div className="d-flex justify-content-center flex-column top">
                         <div className="image mr-4">
-                            <img src={imageURI + data.photo} style={{borderRadius: '10px'}} width="70px" height="70px" alt="" />
+                            <img src={data.photo ? data.photo : "https://res.cloudinary.com/dyaksaa/image/upload/v1607246491/download_tmbj1j.png"} style={{borderRadius: '10px'}} width="70px" height="70px" alt="" />
                         </div>
                         <div className="info d-flex flex-column mb-5">
                             <span className="bold text">{data.name}</span>
