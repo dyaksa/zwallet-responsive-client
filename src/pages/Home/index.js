@@ -7,6 +7,7 @@ import { Container, Modal } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 import { chargeTopup20k, chargeTopup50k, chargeTopup100k } from '../../redux/action/topup'
 import { getHistory } from '../../redux/action/history'
+import { getUser } from "../../redux/action/user";
 import { Link } from 'react-router-dom'
 import Transfer from '../../icons/balance/arrow-up.svg'
 import Topup from '../../icons/balance/plus.svg'
@@ -31,6 +32,7 @@ const Home = props => {
 
     useEffect(() => {
         dispatch(getHistory(token))
+        dispatch(getUser(token));
         dispatch(chargeTopup20k(token))
         dispatch(chargeTopup50k(token))
         dispatch(chargeTopup100k(token))

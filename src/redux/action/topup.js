@@ -27,7 +27,6 @@ export const chargeTopup20k = (token) => async (dispatch) => {
       },
     }
   );
-
   dispatch({ type: CHARGE_TOPUP_1, payload: res.data.data });
 };
 
