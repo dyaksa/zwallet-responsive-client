@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Menu from '../../components/Menu'
@@ -10,7 +10,6 @@ import { Link, useHistory } from 'react-router-dom'
 import { logout } from '../../redux/action/login'
 import { userLogout, editUser, getUser } from '../../redux/action/user'
 import Back from '../../icons/arrow-left.svg'
-import { imageURI } from '../../utils'
 import Notification from '../../components/Notification'
 
 const Profile = props => {
@@ -18,9 +17,18 @@ const Profile = props => {
     const [name, setName] = useState('')
     const [imageFile, setImageFile] = useState('')
     const [modalShow, setModalShow] = useState(false)
+    const [refresh,setRefresh] = useState(false);
     const dispatch = useDispatch()
     const { data, isEditSuccess } = useSelector(state => state.user)
     const { token } = useSelector(state => state.auth)
+
+    useEffect(() => {
+        dispatch(getUser(token));
+        if(refresh){
+            dispatch(getUser(token))
+            setRefresh(false);
+        }
+    },[refresh]);
 
     const style = {
         label: {
@@ -54,18 +62,27 @@ const Profile = props => {
             const formData = new FormData()
             formData.append('photo', imageFile)
             dispatch(editUser(formData, token))
+            setTimeout(() => {
+                setRefresh(true);
+            },1500)
         } else if(name && !imageFile) {
             dispatch(editUser({name}, token))
+            setName("");
+            setTimeout(() => {
+                setRefresh(true);
+            },1500)
         } else if(name && imageFile) {
             const formData = new FormData()
             formData.append('name', name)
             formData.append('photo', imageFile)
             dispatch(editUser(formData, token))
+            setName("");
+            setTimeout(() => {
+                setRefresh(true);
+            },1500)
         }
-        dispatch(getUser(token))
         setModalShow(false)
-        history.push('/profile')
-        window.location.reload()
+        // history.push('/profile')
     }
 
     return (

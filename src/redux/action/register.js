@@ -40,7 +40,7 @@ export const signup = data => async dispatch => {
     dispatch(registerRequest())
     try {
         const res = await Axios.post(`${URI}/auth/register`, data)
-        dispatch(registerSuccess(res.data.message))
+        dispatch(registerSuccess(res.data.message));
     } catch (error) {
         dispatch(registerFailed(error.message))
     }
